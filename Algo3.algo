@@ -1,0 +1,14 @@
+PROCEDURE insertion(Var t: ARRAY_OF INTEGER)
+VAR
+    i,j,c: INTEGER;
+BEGIN
+   FOR i FROM 1 TO t.length-1  DO
+    c:= t[i];
+    j:= i-1;
+    WHILE (j>=0 AND t[j]>c) DO
+        t[j+1]:= t[j];
+        j:=j-1;
+    END_WHILE
+    t[j-1]:=t[j];
+   END_FOR
+END
